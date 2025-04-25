@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upcoming Game Page</title>
+  <link rel="stylesheet" href="./styles/Upcoming_games_page.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fontawesome.com/icons/user-large?f=classic&s=solid" rel="stylesheet">
+  <link href="https://fontawesome.com/icons/magnifying-glass?f=classic&s=solid" rel="stylesheet">
+  <link href="https://fontawesome.com/icons/bars?f=classic&s=solid" rel="stylesheet">
+  <link href="https://fontawesome.com/icons/list?f=classic&s=solid" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/android-chrome-512x512.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/apple-touch-icon.png">
+  <link rel="manifest" href="./images/favicon-32x32.png">
+</head>
+
+</head>
+
+<header class="navbar-desktop">
+  <nav>
+    <div class="navbar-desktop">
+        <div class="navbar-desktop-section">
+            <img src="./images/desktop_nav_logo.jpg" alt="Gaming Store Logo" class="navbar-logo-desktop" onclick="location.href='index.html'">
+            <a href="./index.html" class="nav-button">Home</a>
+            <div class="dropdown-desktop">
+                <button class="dropdown-toggle-desktop">Games<i class="fa-solid fa-chevron-down"></i></button>
+                <div class="dropdown-menu-desktop">
+                  <a href="./game_page.html">Popular Games</a>
+                  <a href="./upcoming_games_page.html">Upcoming Games</a>
+                  <a href="./online_games_page.html">Online Games</a>
+                </div>
+              </div>
+            <div class="search-bar-desktop">
+                <input type="text" placeholder="Search...">
+            </div>
+            <a href="./login_page.html" class="login-desktop">login</a>
+        </div>
+        <div class="navbar-below-desktop">
+            <a href="./about_us_page.html">About Us</a>
+            <a href="./contact_page.html">Contact</a>
+            <a href="./gaming_consoles_page.HTML">Gaming Consoles</a>
+            <a href="gaming_peripherals_page.HTML">Gaming Peripherals</a>
+            <a href="./faq_page.html">Queries & FAQ</a>
+        </div>
+    </div>
+
+</nav>
+</header>
+
+<!-- Mobile Navigation Bar -->
+<header class="navbar-mobile">
+  <nav>
+    <div class="nav-header-mobile">
+        <img src="./images/razer-emblem.jpg" alt="mobile logo" class="navbar-logo-mobile" onclick="location.href='index.html'">
+        <div class="nav-buttons-mobile">
+            <button onclick="toggleSearch()"><e class="fa-solid fa-magnifying-glass"></e></button>
+            <button onclick="toggleMenu()"><m class="fa-solid fa-bars"></m></button>
+            <button onclick="location.href='login_page.html'" class="login-mobile"><i class="fa-solid fa-user-large"></i></button>
+        </div>
+    </div>
+    <input type="text" class="search-bar-dropdown-mobile" placeholder="Search...">
+    <div class="menu-dropdown-mobile">
+        <a href="./index.html">Home</a>
+        <a href="./game_page.html">Popular Games</a>
+        <a href="./upcoming_games_page.html">Upcoming games</a>
+        <a href="./online_games_page.html">Online games</a>
+        <a href="./gaming_consoles_page.HTML">Gaming Consoles</a>
+        <a href="./gaming_peripherals_page.HTML">Gaming Peripherals</a>
+        <a href="./about_us_page.html">About us</a>
+        <a href="./contact_page.html">Contact</a>
+        <a href="./faq_page.html">Queries & FAQ</a>
+        <a href="./login_page.html">Login</a>
+    </div>
+</nav>
+</header>
+
+<script>
+    function toggleSearch() {
+        const searchBar = document.querySelector('.search-bar-dropdown-mobile');
+        searchBar.style.display = searchBar.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function toggleMenu() {
+        const menuDropdown = document.querySelector('.menu-dropdown-mobile');
+        menuDropdown.style.display = menuDropdown.style.display === 'flex' ? 'none' : 'flex';
+    }
+</script>
+
+<header>
+
+<body>
+  <main>
+      <section class="hero">
+    <h1>Upcoming Games </h1>
+  </section>
+  <section class="intro-section">
+    <div class="intro-section-box">
+      <div class="intro-section-image">
+        <div class="image-slideshow">
+          <img src="./images/game_8.jpg" class="slide active" alt="Peripheral 1">
+          <img src="./images/game_9.jpg" class="slide" alt="Peripheral 2">
+          <img src="./images/game_10.jpeg" class="slide" alt="Peripheral 3">
+        </div>
+      </div>
+      <div class="intro-section-text">
+        <h2>Upcoming Games</h2>
+        <p>"Get ready for the hottest upcoming titles and new adventures in gaming."</p>
+        <div class="search-dropdown-container">
+          <input type="text" placeholder="Search..." class="search-bar">
+          <div class="dropdown">
+            <button class="dropbtn"><i class="fa-solid fa-list"></i></button>
+            <div class="dropdown-content">
+              <a href="#option1">Top ratings</a>
+              <a href="#option2">Lowest price</a>
+              <a href="#option3">Highest price</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="game-list">
+    <!-- Game Box -->
+    <div class="game-box">
+      <div class="game-image">
+        <img src="./images/game_8.jpg" alt="Game 1">
+      </div>
+      <div class="game-content">
+        <h2>FF7 Rebirth</h2>
+        <p>Release Date: 2025-07-12</p>
+        <p>Platforms: PC, PS5, Xbox</p>
+        <p>Price: Rs:900</p>
+        <button class="buy-button">Buy Now</button>
+      </div>
+      <div class="extra-info">
+        <p>Final Fantasy VII Rebirth is a 2024 action RPG and the second installment in Square Enix's remake trilogy of the 1997 classic.</p>
+        <h3 class="highlight">Release data: 2025.07.12, Pre-order Now!</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="game-list">
+    <!-- Game Box -->
+    <div class="game-box">
+      <div class="game-image">
+        <img src="./images/game_9.jpg" alt="Game 1">
+      </div>
+      <div class="game-content">
+        <h2>Dying light</h2>
+        <p>Release Date: 2026-07-13</p>
+        <p>Platforms: PC, PS5, Xbox</p>
+        <p>Price:Rs:500</p>
+        <button class="buy-button">Buy Now</button>
+      </div>
+      <div class="extra-info">
+        <p>
+          Dying Light: The Beast is a standalone zombie adventure set in the post-apocalyptic Castor Woods.
+        </p>
+        <h3 class="highlight">Release data: 2026.07.13, Pre-order Now!</h3>
+      </div>
+    </div>
+  </section>
+  
+  <section class="game-list">
+    <!-- Game Box -->
+    <div class="game-box">
+      <div class="game-image">
+        <img src="./images/game_10.jpeg" alt="Game 1">
+      </div>
+      <div class="game-content">
+        <h2>Subnautica 2</h2>
+        <p>Release Date: 2026-01-12</p>
+        <p>Platforms: PC, PS5, Xbox</p>
+        <p>Price: Rs:680</p>
+        <button class="buy-button">Buy Now</button>
+      </div>
+      <div class="extra-info">
+        <p>
+        Subnautica is a 2026 survival game where players explore an alien ocean planet as crash survivor Ryley Robinson.
+        </p>
+        <h3 class="highlight">Release data: 2026.01.12 , Pre-order Now!</h3>
+      </div>
+    </div>
+  </section>
+  
+  <section class="game-list">
+    <!-- Game Box -->
+    <div class="game-box">
+      <div class="game-image">
+        <img src="./images/game_7.jpeg" alt="Game 1">
+      </div>
+      <div class="game-content">
+        <h2>Assassin's</h2>
+        <p>Release Date: 2027-01-12</p>
+        <p>Platforms: PC, PS5, Xbox</p>
+        <p>Price: Rs:700</p>
+        <button class="buy-button">Buy Now</button>
+      </div>
+      <div class="extra-info">
+        <p>
+          Assassin's Creed Shadows is an upcoming action RPG and the 14th main installment in the series, following 2023's Assassin's Creed Mirage.
+        </p>
+        <h3 class="highlight">Release data: 2027.01.12 , Pre-order Now!</h3>
+      </div>
+    </div>
+  </section> 
+  <section class="game-list">
+    <!-- Game Box -->
+    <div class="game-box">
+      <div class="game-image">
+        <img src="./images/game_11.jpg" alt="Game 1">
+      </div>
+      <div class="game-content">
+        <h2>Low Lowlife</h2>
+        <p>Release Date: 2026-08-13</p>
+        <p>Platforms: PC, PS5, Xbox</p>
+        <p>Price: 9.Rs:699</p>
+        <button class="buy-button">Buy Now</button>
+      </div>
+      <div class="extra-info">
+        <p>
+          Lowlife Forms is our Flagship IP, an epic shooter that blends gunplay and magic in a world of space gangsters and shamans.
+        </p>
+        <h3 class="highlight">Release data: 2026.08.13 , Pre-order Now!</h3>
+      </div>
+    </div>
+  </section> 
+
+  <section class="games-shortcut">
+    <div class="games-shortcut-layout">
+      <p class="games-shortcut-description"> Visit our top-rated games, from thrilling adventures to fan-favorite classics</p>
+        <a href="./game_page.html" class="games-shortcut-button">Games</a>
+    </div>
+</section>
+<section class="games-shortcut">
+  <div class="games-shortcut-layout">
+    <p class="games-shortcut-description">Dive into endless multiplayer fun with top online games. Join epic battles, explore vast worlds, and connect with players worldwide for the ultimate online experience.</p>
+      <a href="./online_games_page.html" class="games-shortcut-button">Online games</a>
+  </div>
+</section> 
+</body>
+</main>
+<footer class="footer">
+  <!-- Footer Top Section -->
+  <div class="footer-top">
+
+    <!-- Logo -->
+    <div class="footer-logo">
+      <img src="./images/razer-emblem.jpg" alt="Logo" class="navbar-logo-desktop" onclick="location.href='index.html'">
+    </div>
+
+    <!-- Contact Information -->
+    <div class="footer-contact">
+      <p>Contact us:</p>
+      <p>Email: contact@example.com</p>
+      <p>Phone: +123 456 7890</p>
+    </div>
+
+    <div class="footer-contact">
+      <p>Contact us:</p>
+      <p>Email: contact@example.com</p>
+      <p>Phone: +123 456 7890</p>
+    </div>
+
+    <div class="footer-contact">
+      <p>Contact us:</p>
+      <p>Email: contact@example.com</p>
+      <p>Phone: +123 456 7890</p>
+    </div>
+
+
+
+    <!-- Social Media Icons -->
+    <div class="footer-social">
+      <a href="#" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+  <!-- Footer Bottom Section -->
+  <div class="footer-bottom">
+    <a href="./index.html">Home</a>
+    <a href="./about_us_page.html">About us</a>
+    <a href="./game_page.html">Popular Games</a>
+    <a href="./upcoming_games_page.html">Upcoming games</a>
+    <a href="./online_games_page.html">Online games</a>
+    <a href="./gaming_consoles_page.HTML">Gaming Consoles</a>
+    <a href="./gaming_peripherals_page.HTML">Gaming Peripherals</a>
+    <a href="./contact_page.html">Contact</a>
+    <a href="./faq_page.html">Queries & FAQ</a>
+    <a href="./login_page.html">Login</a>
+  </div>
+    <!-- References -->
+    <!-- Reference for icons: Font Awesome (https://fontawesome.com/) -->
+    <!-- Reference for images: freepick -->
+    <!-- Reference for images:https://www.wallpaperflare.com/ -->
+    <!-- Reference for content: Curated based on user feedback and popular trends -->
+</footer>
+</html>

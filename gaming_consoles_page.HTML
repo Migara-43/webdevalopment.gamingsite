@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaming Consoles</title>
+  <link rel="stylesheet" href="./styles/gaming_consoles_page.CSS">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fontawesome.com/icons/user-large?f=classic&s=solid" rel="stylesheet">
+  <link href="https://fontawesome.com/icons/magnifying-glass?f=classic&s=solid" rel="stylesheet">
+  <link href="https://fontawesome.com/icons/bars?f=classic&s=solid" rel="stylesheet">
+  <link href="https://fontawesome.com/icons/list?f=classic&s=solid" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/android-chrome-512x512.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/apple-touch-icon.png">
+  <link rel="manifest" href="./images/favicon-32x32.png">
+</head>
+
+</head>
+
+<header class="navbar-desktop">
+  <nav>
+    <div class="navbar-desktop">
+        <div class="navbar-desktop-section">
+            <img src="./images/desktop_nav_logo.jpg" alt="Gaming Store Logo" class="navbar-logo-desktop" onclick="location.href='index.html'">
+            <a href="./index.html" class="nav-button">Home</a>
+            <div class="dropdown-desktop">
+                <button class="dropdown-toggle-desktop">Games<i class="fa-solid fa-chevron-down"></i></button>
+                <div class="dropdown-menu-desktop">
+                  <a href="./game_page.html">Popular Games</a>
+                  <a href="./upcoming_games_page.html">Upcoming Games</a>
+                  <a href="./online_games_page.html">Online Games</a>
+                </div>
+              </div>
+            <div class="search-bar-desktop">
+                <input type="text" placeholder="Search...">
+            </div>
+            <a href="./login_page.html" class="login-desktop">login</a>
+        </div>
+        <div class="navbar-below-desktop">
+            <a href="./about_us_page.html">About Us</a>
+            <a href="./contact_page.html">Contact</a>
+            <a href="./gaming_consoles_page.HTML">Gaming Consoles</a>
+            <a href="gaming_peripherals_page.HTML">Gaming Peripherals</a>
+            <a href="./faq_page.html">Queries & FAQ</a>
+        </div>
+    </div>
+
+</nav>
+</header>
+
+<!-- Mobile Navigation Bar -->
+<header class="navbar-mobile">
+  <nav>
+    <div class="nav-header-mobile">
+        <img src="./images/razer-emblem.jpg" alt="mobile logo" class="navbar-logo-mobile" onclick="location.href='index.html'">
+        <div class="nav-buttons-mobile">
+            <button onclick="toggleSearch()"><e class="fa-solid fa-magnifying-glass"></e></button>
+            <button onclick="toggleMenu()"><m class="fa-solid fa-bars"></m></button>
+            <button onclick="location.href='login_page.html'" class="login-mobile"><i class="fa-solid fa-user-large"></i></button>
+        </div>
+    </div>
+    <input type="text" class="search-bar-dropdown-mobile" placeholder="Search...">
+    <div class="menu-dropdown-mobile">
+        <a href="./index.html">Home</a>
+        <a href="./game_page.html">Popular Games</a>
+        <a href="./upcoming_games_page.html">Upcoming games</a>
+        <a href="./online_games_page.html">Online games</a>
+        <a href="./gaming_consoles_page.HTML">Gaming Consoles</a>
+        <a href="./gaming_peripherals_page.HTML">Gaming Peripherals</a>
+        <a href="./about_us_page.html">About us</a>
+        <a href="./contact_page.html">Contact</a>
+        <a href="./faq_page.html">Queries & FAQ</a>
+        <a href="./login_page.html">Login</a>
+    </div>
+</nav>
+</header>
+
+<script>
+    function toggleSearch() {
+        const searchBar = document.querySelector('.search-bar-dropdown-mobile');
+        searchBar.style.display = searchBar.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function toggleMenu() {
+        const menuDropdown = document.querySelector('.menu-dropdown-mobile');
+        menuDropdown.style.display = menuDropdown.style.display === 'flex' ? 'none' : 'flex';
+    }
+</script>
+
+
+
+
+<body>
+  <main>
+      <section class="hero">
+    <h1>Gaming Consoles</h1>
+  </section>
+
+  <section class="intro-section">
+    <div class="intro-section-box">
+      <div class="intro-section-image">
+        <div class="image-slideshow">
+          <img src="./images/g_cons_1.jpg" class="slide active" alt="Peripheral 1">
+          <img src="./images/g_cons_2.jpg" class="slide" alt="Peripheral 2">
+          <img src="./images/g_cons_3.jpg" class="slide" alt="Peripheral 3">
+        </div>
+      </div>
+      <div class="intro-section-text">
+        <h2>Gaming consoles</h2>
+        <p></p>
+        <div class="search-dropdown-container">
+          <input type="text" placeholder="Search..." class="search-bar">
+          <div class="dropdown">
+            <button class="dropbtn"><i class="fa-solid fa-list"></i></button>
+            <div class="dropdown-content">
+              <a href="#option1">Top ratings</a>
+              <a href="#option2">Lowest price</a>
+              <a href="#option3">Highest price</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="game-list">
+    <!-- Game Box -->
+    <div class="game-box">
+      <div class="game-image">
+        <img src="./images/g_cons_1.jpg" alt="Game 1">
+      </div>
+      <div class="game-content">
+        <h2>Xbox X</h2>
+        <p>Release Date: 2025-01-12</p>
+        <p>Platforms: PC, PS5, Xbox</p>
+        <p>Price: Rs:55999</p>
+        <button class="buy-button">Buy Now</button>
+      </div>
+      <div class="extra-info">
+        <p>
+          The Xbox Series X is a powerful next-gen gaming console with 4K gaming, lightning-fast load times, and immersive visuals and audio.
+        </p>
+        <h3 class="highlight">Special Offer: Price: Rs:55999 </h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="game-list">
+    <!-- Game Box -->
+    <div class="game-box">
+      <div class="game-image">
+        <img src="./images/g_cons_2.jpg" alt="Game 1">
+      </div>
+      <div class="game-content">
+        <h2>PS5</h2>
+        <p>Release Date: 2025-01-12</p>
+        <p>Platforms: PC, PS5, Xbox</p>
+        <p>Price: $49999</p>
+        <button class="buy-button">Buy Now</button>
+      </div>
+      <div class="extra-info">
+        <p>The PlayStation 5 (PS5) is a cutting-edge gaming console with 4K graphics, ultra-fast load times powered by an SSD, and a revolutionary DualSense controller for an immersive gaming experience.</p>
+        <h3 class="highlight">Special Offer: Price: $49999 </h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="game-list">
+    <!-- Game Box -->
+    <div class="game-box">
+      <div class="game-image">
+        <img src="./images/g_cons_3.jpg" alt="Game 1">
+      </div>
+      <div class="game-content">
+        <h2>Nintendo</h2>
+        <p>Release Date: 2025-01-12</p>
+        <p>Platforms: PC, PS5, Xbox</p>
+        <p>Price: $39999</p>
+        <button class="buy-button">Buy Now</button>
+      </div>
+      <div class="extra-info">
+        <p>
+          Nintendo is a legendary Japanese gaming company known for iconic franchises like Mario, Zelda, and the Nintendo Switch.
+        </p>
+        <h3 class="highlight">Special Offer: Price: Rs:39999 </h3>
+      </div>
+    </div>
+  </section>
+  
+  <section class="game-list">
+    <!-- Game Box -->
+    <div class="game-box">
+      <div class="game-image">
+        <img src="./images/g_cons_4.jpg" alt="Game 1">
+      </div>
+      <div class="game-content">
+        <h2>PS4</h2>
+        <p>Release Date: 2025-01-12</p>
+        <p>Platforms: PC, PS5, Xbox</p>
+        <p>Price: $48899</p>
+        <button class="buy-button">Buy Now</button>
+      </div>
+      <div class="extra-info">
+        <p>
+          The PS4 is Sony's 2013 gaming console, known for powerful performance and exclusive titles like God of War and Uncharted 4.
+        </p>
+        <h3 class="highlight">Special Offer: Price: $48899</h3>
+      </div>
+    </div>
+  </section>
+  
+  <section class="game-list">
+    <!-- Game Box -->
+    <div class="game-box">
+      <div class="game-image">
+        <img src="./images/g_cons_5.jpg" alt="Game 1">
+      </div>
+      <div class="game-content">
+        <h2>Xbox S</h2>
+        <p>Release Date: 2025-01-12</p>
+        <p>Platforms: PC, PS5, Xbox</p>
+        <p>Price: Rs:49999</p>
+        <button class="buy-button">Buy Now</button>
+      </div>
+      <div class="extra-info">
+        <p>
+          The Xbox Series S is a compact, all-digital gaming console offering smooth gameplay at up to 1440p resolution, fast load times, and access to Xbox Game Pass.
+        </p>
+        <h3 class="highlight">Special Offer:Price: Rs:49999</h3>
+      </div>
+    </div>
+  </section>  
+
+
+<section class="games-shortcut">
+  <div class="games-shortcut-layout">
+    <p class="games-shortcut-description">Upgrade your setup with cutting-edge gaming headsets, keyboards, and more</p>
+      <a href="./gaming_peripherals_page.HTML" class="games-shortcut-button">Gaming periphirals</a>
+  </div>
+</section>
+</main>
+</body>
+<footer class="footer">
+  <!-- Footer Top Section -->
+  <div class="footer-top">
+
+    <!-- Logo -->
+    <div class="footer-logo">
+      <img src="./images/razer-emblem.jpg" alt="Logo" class="navbar-logo-desktop" onclick="location.href='index.html'">
+    </div>
+
+    <!-- Contact Information -->
+    <div class="footer-contact">
+      <p>Contact us:</p>
+      <p>Email: contact@example.com</p>
+      <p>Phone: +123 456 7890</p>
+    </div>
+
+    <div class="footer-contact">
+      <p>Contact us:</p>
+      <p>Email: contact@example.com</p>
+      <p>Phone: +123 456 7890</p>
+    </div>
+
+    <div class="footer-contact">
+      <p>Contact us:</p>
+      <p>Email: contact@example.com</p>
+      <p>Phone: +123 456 7890</p>
+    </div>
+
+
+
+    <!-- Social Media Icons -->
+    <div class="footer-social">
+      <a href="#" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+  <!-- Footer Bottom Section -->
+  <div class="footer-bottom">
+    <a href="./index.html">Home</a>
+    <a href="./about_us_page.html">About us</a>
+    <a href="./game_page.html">Popular Games</a>
+    <a href="./upcoming_games_page.html">Upcoming games</a>
+    <a href="./online_games_page.html">Online games</a>
+    <a href="./gaming_consoles_page.HTML">Gaming Consoles</a>
+    <a href="./gaming_peripherals_page.HTML">Gaming Peripherals</a>
+    <a href="./contact_page.html">Contact</a>
+    <a href="./faq_page.html">Queries & FAQ</a>
+    <a href="./login_page.html">Login</a>
+  </div>
+    <!-- References -->
+    <!-- Reference for icons: Font Awesome (https://fontawesome.com/) -->
+    <!-- Reference for images: freepick -->
+    <!-- Reference for images:https://www.wallpaperflare.com/ -->
+    <!-- Reference for content: Curated based on user feedback and popular trends -->
+</footer>
+</html>

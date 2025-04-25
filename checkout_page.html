@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="styles/checkout_page.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/apple-touch-icon.png">
+    <link rel="manifest" href="./images/favicon-32x32.png">
+</head>
+<body>
+
+    <header class="navbar-desktop">
+        <nav>
+          <div class="navbar-desktop">
+              <div class="navbar-desktop-section">
+                  <img src="./images/desktop_nav_logo.jpg" alt="Gaming Store Logo" class="navbar-logo-desktop" onclick="location.href='index.html'">
+                  <a href="./index.html" class="nav-button">Home</a>
+                  <div class="dropdown-desktop">
+                      <button class="dropdown-toggle-desktop">Games<i class="fa-solid fa-chevron-down"></i></button>
+                      <div class="dropdown-menu-desktop">
+                        <a href="./game_page.html">Popular Games</a>
+                        <a href="./upcoming_games_page.html">Upcoming Games</a>
+                        <a href="./online_games_page.html">Online Games</a>
+                      </div>
+                    </div>
+                  <div class="search-bar-desktop">
+                      <input type="text" placeholder="Search...">
+                  </div>
+                  <a href="./login_page.html" class="login-desktop">login</a>
+              </div>
+              <div class="navbar-below-desktop">
+                  <a href="./about_us_page.html">About Us</a>
+                  <a href="./contact_page.html">Contact</a>
+                  <a href="./gaming_consoles_page.HTML">Gaming Consoles</a>
+                  <a href="gaming_peripherals_page.HTML">Gaming Peripherals</a>
+                  <a href="./faq_page.html">Queries & FAQ</a>
+                  <a href="./order_page.html">Order Parts</a>
+                  <a href="./checkout_page.html">Checkout</a>
+              </div>
+          </div>
+      </nav>
+      </header>
+  
+      <!-- Mobile Navigation Bar -->
+      <header class="navbar-mobile">
+        <nav>
+          <div class="nav-header-mobile">
+              <img src="./images/razer-emblem.jpg" alt="mobile logo" class="navbar-logo-mobile" onclick="location.href='index.html'">
+              <div class="nav-buttons-mobile">
+                  <button onclick="toggleSearch()"><e class="fa-solid fa-magnifying-glass"></e></button>
+                  <button onclick="toggleMenu()"><m class="fa-solid fa-bars"></m></button>
+                  <button onclick="location.href='login_page.html'" class="login-mobile"><i class="fa-solid fa-user-large"></i></button>
+              </div>
+          </div>
+          <input type="text" class="search-bar-dropdown-mobile" placeholder="Search...">
+          <div class="menu-dropdown-mobile">
+              <a href="./index.html">Home</a>
+              <a href="./game_page.html">Popular Games</a>
+              <a href="./upcoming_games_page.html">Upcoming games</a>
+              <a href="./online_games_page.html">Online games</a>
+              <a href="./gaming_consoles_page.HTML">Gaming Consoles</a>
+              <a href="./gaming_peripherals_page.HTML">Gaming Peripherals</a>
+              <a href="./about_us_page.html">About us</a>
+              <a href="./contact_page.html">Contact</a>
+              <a href="./faq_page.html">Queries & FAQ</a>
+              <a href="./order_page.html">Order Parts</a>
+              <a href="./checkout_page.html">Checkout</a>
+              <a href="./login_page.html">Login</a>
+          </div>
+      </nav>
+      </header>
+  
+      <script>
+          function toggleSearch() {
+              const searchBar = document.querySelector('.search-bar-dropdown-mobile');
+              searchBar.style.display = searchBar.style.display === 'block' ? 'none' : 'block';
+          }
+  
+          function toggleMenu() {
+              const menuDropdown = document.querySelector('.menu-dropdown-mobile');
+              menuDropdown.style.display = menuDropdown.style.display === 'flex' ? 'none' : 'flex';
+          }
+      </script>
+
+<section class="hero">
+    <h1>Checkout</h1>
+  </section>
+    <div class="checkout-container">
+
+
+        <!-- Personal Details Section -->
+        <div class="checkout-section">
+            <h2>Personal Details</h2>
+            <form class="details-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Delivery Details Section -->
+        <div class="checkout-section">
+            <h2>Delivery Details</h2>
+            <form class="details-form">
+                <div class="form-group">
+                    <label for="address">Street Address</label>
+                    <input type="text" id="address" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="postcode">Postcode</label>
+                        <input type="text" id="postcode" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" required>
+                        <option value="">Select Country</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="US">United States</option>
+                        <!-- Add more countries as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="deliveryInstructions">Delivery Instructions (Optional)</label>
+                    <textarea id="deliveryInstructions" rows="3"></textarea>
+                </div>
+            </form>
+        </div>
+
+        <!-- Payment Information Section -->
+        <div class="checkout-section">
+            <h2>Payment Information</h2>
+            <form class="details-form">
+                <div class="form-group">
+                    <label for="cardName">Cardholder Name</label>
+                    <input type="text" id="cardName" required>
+                </div>
+                <div class="form-group">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" id="cardNumber" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiry">Expiry Date</label>
+                        <input type="text" id="expiry" placeholder="MM/YY" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="payment-buttons-container">
+                        <button type="button" id="savePaymentBtn" class="payment-button">Save Payment Details</button>
+                        <button type="button" id="addPaymentBtn" class="payment-button">Add Payment Details</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Order Summary Section -->
+        <div class="checkout-section">
+            <h2>Order Summary</h2>
+            <div class="summary-table-container">
+                <table class="summary-table">
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Original Total</th>
+                            <th>20% Off Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Submit Section -->
+        <div class="submit-section">
+            <div class="checkout-buttons">
+                <button type="button" class="select-more-btn" onclick="window.location.href='order_page.html'">Select More Items</button>
+                <button type="submit" class="submit-button">Complete Purchase</button>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Footer Top Section -->
+        <div class="footer-top">
+      
+          <!-- Logo -->
+          <div class="footer-logo">
+            <img src="./images/razer-emblem.jpg" alt="Logo" class="navbar-logo-desktop" onclick="location.href='index.html'">
+          </div>
+      
+          <!-- Contact Information -->
+          <div class="footer-contact">
+            <p>Contact us:</p>
+            <p>Email: contact@example.com</p>
+            <p>Phone: +123 456 7890</p>
+          </div>
+      
+          <div class="footer-contact">
+            <p>Contact us:</p>
+            <p>Email: contact@example.com</p>
+            <p>Phone: +123 456 7890</p>
+          </div>
+      
+          <div class="footer-contact">
+            <p>Contact us:</p>
+            <p>Email: contact@example.com</p>
+            <p>Phone: +123 456 7890</p>
+          </div>
+      
+      
+      
+          <!-- Social Media Icons -->
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+          <a href="./index.html">Home</a>
+          <a href="./about_us_page.html">About us</a>
+          <a href="./game_page.html">Popular Games</a>
+          <a href="./upcoming_games_page.html">Upcoming games</a>
+          <a href="./online_games_page.html">Online games</a>
+          <a href="./gaming_consoles_page.HTML">Gaming Consoles</a>
+          <a href="./gaming_peripherals_page.HTML">Gaming Peripherals</a>
+          <a href="./contact_page.html">Contact</a>
+          <a href="./faq_page.html">Queries & FAQ</a>
+          <a href="./order_page.html">Order page</a>
+          <a href="./checkout_page.html">Checkout page</a>
+          <a href="./login_page.html">Login</a>
+        </div>
+          <!-- References -->
+          <!-- Reference for icons: Font Awesome (https://fontawesome.com/) -->
+          <!-- Reference for images: freepick -->
+          <!-- Reference for images:https://www.wallpaperflare.com/ -->
+          <!-- Reference for content: Curated based on user feedback and popular trends -->
+      </footer>
+    <script src="scripts/checkout_page.js"></script>
+</body>
+</html>
+

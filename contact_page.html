@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./styles/contact_pages.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fontawesome.com/icons/user-large?f=classic&s=solid" rel="stylesheet">
+    <link href="https://fontawesome.com/icons/magnifying-glass?f=classic&s=solid" rel="stylesheet">
+    <link href="https://fontawesome.com/icons/bars?f=classic&s=solid" rel="stylesheet">
+    <link href="https://fontawesome.com/icons/list?f=classic&s=solid" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/apple-touch-icon.png">
+    <link rel="manifest" href="./images/favicon-32x32.png">
+  </head>
+
+
+  
+</head>
+
+<header class="navbar-desktop">
+  <nav>
+    <div class="navbar-desktop">
+        <div class="navbar-desktop-section">
+            <img src="./images/desktop_nav_logo.jpg" alt="Gaming Store Logo" class="navbar-logo-desktop" onclick="location.href='index.html'">
+            <a href="./index.html" class="nav-button">Home</a>
+            <div class="dropdown-desktop">
+                <button class="dropdown-toggle-desktop">Games<i class="fa-solid fa-chevron-down"></i></button>
+                <div class="dropdown-menu-desktop">
+                  <a href="./game_page.html">Popular Games</a>
+                  <a href="./upcoming_games_page.html">Upcoming Games</a>
+                  <a href="./online_games_page.html">Online Games</a>
+                </div>
+              </div>
+            <div class="search-bar-desktop">
+                <input type="text" placeholder="Search...">
+            </div>
+            <a href="./login_page.html" class="login-desktop">login</a>
+        </div>
+        <div class="navbar-below-desktop">
+            <a href="./about_us_page.html">About Us</a>
+            <a href="./contact_page.html">Contact</a>
+            <a href="./gaming_consoles_page.HTML">Gaming Consoles</a>
+            <a href="gaming_peripherals_page.HTML">Gaming Peripherals</a>
+            <a href="./faq_page.html">Queries & FAQ</a>
+        </div>
+    </div>
+
+</nav>
+</header>
+
+<!-- Mobile Navigation Bar -->
+<header class="navbar-mobile">
+  <nav>
+    <div class="nav-header-mobile">
+        <img src="./images/razer-emblem.jpg" alt="mobile logo" class="navbar-logo-mobile" onclick="location.href='index.html'">
+        <div class="nav-buttons-mobile">
+            <button onclick="toggleSearch()"><e class="fa-solid fa-magnifying-glass"></e></button>
+            <button onclick="toggleMenu()"><m class="fa-solid fa-bars"></m></button>
+            <button onclick="location.href='login_page.html'" class="login-mobile"><i class="fa-solid fa-user-large"></i></button>
+        </div>
+    </div>
+    <input type="text" class="search-bar-dropdown-mobile" placeholder="Search...">
+    <div class="menu-dropdown-mobile">
+        <a href="./index.html">Home</a>
+        <a href="./game_page.html">Popular Games</a>
+        <a href="./upcoming_games_page.html">Upcoming games</a>
+        <a href="./online_games_page.html">Online games</a>
+        <a href="./gaming_consoles_page.HTML">Gaming Consoles</a>
+        <a href="./gaming_peripherals_page.HTML">Gaming Peripherals</a>
+        <a href="./about_us_page.html">About us</a>
+        <a href="./contact_page.html">Contact</a>
+        <a href="./faq_page.html">Queries & FAQ</a>
+        <a href="./login_page.html">Login</a>
+    </div>
+</nav>
+</header>
+
+<script>
+    function toggleSearch() {
+        const searchBar = document.querySelector('.search-bar-dropdown-mobile');
+        searchBar.style.display = searchBar.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function toggleMenu() {
+        const menuDropdown = document.querySelector('.menu-dropdown-mobile');
+        menuDropdown.style.display = menuDropdown.style.display === 'flex' ? 'none' : 'flex';
+    }
+</script>
+
+
+
+    <body>                
+            
+      <section class="hero">
+          <h1>Contact Our Stores</h1>
+      </section>
+  
+      <main class="container">
+  
+          <!-- Store Section -->
+          <section class="stores">
+              <article class="store">
+                  <img src="./images/KCC.jpg" alt="Store 1">
+                  <div class="store-info">
+                      <h2>Store 1</h2>
+                      <p>Address: 123 Main Street, Cityville</p>
+                      <p>Phone: (123) 456-7890</p>
+                  </div>
+                  <form class="contact-form">
+                      <h3>Contact Store 1</h3>
+                      <label for="name1">Name:</label>
+                      <input type="text" id="name1" name="name1" required>
+  
+                      <label for="email1">Email:</label>
+                      <input type="email" id="email1" name="email1" required>
+  
+                      <label for="message1">Message:</label>
+                      <textarea id="message1" name="message1" rows="4" required></textarea>
+  
+                      <button type="submit">Submit</button>
+                  </form>
+              </article>
+  
+              <article class="store">
+                  <img src="./images/CCC.jpg" alt="Store 2">
+                  <div class="store-info">
+                      <h2>Store 2</h2>
+                      <p>Address: 456 Market Avenue, Townsville</p>
+                      <p>Phone: (987) 654-3210</p>
+                  </div>
+                  <form class="contact-form">
+                      <h3>Contact Store 2</h3>
+                      <label for="name2">Name:</label>
+                      <input type="text" id="name2" name="name2" required>
+  
+                      <label for="email2">Email:</label>
+                      <input type="email" id="email2" name="email2" required>
+  
+                      <label for="message2">Message:</label>
+                      <textarea id="message2" name="message2" rows="4" required></textarea>
+  
+                      <button type="submit">Submit</button>
+                  </form>
+              </article>
+  
+              <article class="store">
+                  <img src="./images/Havloc.jpg" alt="Store 3">
+                  <div class="store-info">
+                      <h2>Store 3</h2>
+                      <p>Address: 789 Sunset Boulevard, Metropolis</p>
+                      <p>Phone: (555) 123-4567</p>
+                  </div>
+                  <form class="contact-form">
+                      <h3>Contact Store 3</h3>
+                      <label for="name3">Name:</label>
+                      <input type="text" id="name3" name="name3" required>
+  
+                      <label for="email3">Email:</label>
+                      <input type="email" id="email3" name="email3" required>
+  
+                      <label for="message3">Message:</label>
+                      <textarea id="message3" name="message3" rows="4" required></textarea>
+  
+                      <button type="submit">Submit</button>
+                  </form>
+              </article>
+          </section>
+  
+           <!-- FAQ Shortcut Section -->
+        <section class="faq-shortcut">
+          <div class="faq-layout">
+            <p class="faq-description">Have questions? Visit our FAQ page to find answers to common inquiries and get the help you need.</p>
+              <a href="./faq_page.html" class="faq-button">Queries and FAQ Page</a>
+          </div>
+      </section>
+      </main>
+  </body>
+  <footer class="footer">
+    <!-- Footer Top Section -->
+    <div class="footer-top">
+  
+      <!-- Logo -->
+      <div class="footer-logo">
+        <img src="./images/razer-emblem.jpg" alt="Logo" class="navbar-logo-desktop" onclick="location.href='index.html'">
+      </div>
+  
+      <!-- Contact Information -->
+      <div class="footer-contact">
+        <p>Contact us:</p>
+        <p>Email: contact@example.com</p>
+        <p>Phone: +123 456 7890</p>
+      </div>
+  
+      <div class="footer-contact">
+        <p>Contact us:</p>
+        <p>Email: contact@example.com</p>
+        <p>Phone: +123 456 7890</p>
+      </div>
+  
+      <div class="footer-contact">
+        <p>Contact us:</p>
+        <p>Email: contact@example.com</p>
+        <p>Phone: +123 456 7890</p>
+      </div>
+  
+  
+  
+      <!-- Social Media Icons -->
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+      <a href="./index.html">Home</a>
+      <a href="./about_us_page.html">About us</a>
+      <a href="./game_page.html">Popular Games</a>
+      <a href="./upcoming_games_page.html">Upcoming games</a>
+      <a href="./online_games_page.html">Online games</a>
+      <a href="./gaming_consoles_page.HTML">Gaming Consoles</a>
+      <a href="./gaming_peripherals_page.HTML">Gaming Peripherals</a>
+      <a href="./contact_page.html">Contact</a>
+      <a href="./faq_page.html">Queries & FAQ</a>
+      <a href="./login_page.html">Login</a>
+    </div>
+      <!-- References -->
+      <!-- Reference for icons: Font Awesome (https://fontawesome.com/) -->
+      <!-- Reference for images: freepick -->
+      <!-- Reference for images:https://www.wallpaperflare.com/ -->
+      <!-- Reference for content: Curated based on user feedback and popular trends -->
+  </footer>
+  </html>

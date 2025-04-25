@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Computer Parts</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/order_page.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/apple-touch-icon.png">
+    <link rel="manifest" href="./images/favicon-32x32.png">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar-desktop">
+        <nav>
+          <div class="navbar-desktop">
+              <div class="navbar-desktop-section">
+                  <img src="./images/desktop_nav_logo.jpg" alt="Gaming Store Logo" class="navbar-logo-desktop" onclick="location.href='index.html'">
+                  <a href="./index.html" class="nav-button">Home</a>
+                  <div class="dropdown-desktop">
+                      <button class="dropdown-toggle-desktop">Games<i class="fa-solid fa-chevron-down"></i></button>
+                      <div class="dropdown-menu-desktop">
+                        <a href="./game_page.html">Popular Games</a>
+                        <a href="./upcoming_games_page.html">Upcoming Games</a>
+                        <a href="./online_games_page.html">Online Games</a>
+                      </div>
+                    </div>
+                  <div class="search-bar-desktop">
+                      <input type="text" placeholder="Search...">
+                  </div>
+                  <a href="./login_page.html" class="login-desktop">login</a>
+              </div>
+              <div class="navbar-below-desktop">
+                  <a href="./about_us_page.html">About Us</a>
+                  <a href="./contact_page.html">Contact</a>
+                  <a href="./gaming_consoles_page.HTML">Gaming Consoles</a>
+                  <a href="gaming_peripherals_page.HTML">Gaming Peripherals</a>
+                  <a href="./faq_page.html">Queries & FAQ</a>
+                  <a href="./order_page.html">Order Parts</a>
+                  <a href="./checkout_page.html">Checkout</a>
+              </div>
+          </div>
+  
+      </nav>
+      </header>
+  
+      <!-- Mobile Navigation Bar -->
+      <header class="navbar-mobile">
+        <nav>
+          <div class="nav-header-mobile">
+              <img src="./images/razer-emblem.jpg" alt="mobile logo" class="navbar-logo-mobile" onclick="location.href='index.html'">
+              <div class="nav-buttons-mobile">
+                  <button onclick="toggleSearch()"><e class="fa-solid fa-magnifying-glass"></e></button>
+                  <button onclick="toggleMenu()"><m class="fa-solid fa-bars"></m></button>
+                  <button onclick="location.href='login_page.html'" class="login-mobile"><i class="fa-solid fa-user-large"></i></button>
+              </div>
+          </div>
+          <input type="text" class="search-bar-dropdown-mobile" placeholder="Search...">
+          <div class="menu-dropdown-mobile">
+              <a href="./index.html">Home</a>
+              <a href="./game_page.html">Popular Games</a>
+              <a href="./upcoming_games_page.html">Upcoming games</a>
+              <a href="./online_games_page.html">Online games</a>
+              <a href="./gaming_consoles_page.HTML">Gaming Consoles</a>
+              <a href="./gaming_peripherals_page.HTML">Gaming Peripherals</a>
+              <a href="./about_us_page.html">About us</a>
+              <a href="./contact_page.html">Contact</a>
+              <a href="./faq_page.html">Queries & FAQ</a>
+              <a href="./order_page.html">Order Parts</a>
+              <a href="./checkout_page.html">Checkout</a>
+              <a href="./login_page.html">Login</a>
+          </div>
+      </nav>
+      </header>
+  
+      <script>
+          function toggleSearch() {
+              const searchBar = document.querySelector('.search-bar-dropdown-mobile');
+              searchBar.style.display = searchBar.style.display === 'block' ? 'none' : 'block';
+          }
+  
+          function toggleMenu() {
+              const menuDropdown = document.querySelector('.menu-dropdown-mobile');
+              menuDropdown.style.display = menuDropdown.style.display === 'flex' ? 'none' : 'flex';
+          }
+      </script>
+
+    <!-- Main Content -->
+        <section class="hero">
+            <h1>Order Computer Parts</h1>
+          </section>
+    <main class="order-container">
+        <div class="section-nav-buttons">
+            <button class="section-nav-btn" data-section="processors">Processors</button>
+            <button class="section-nav-btn" data-section="graphics-cards">Graphics Cards</button>
+            <button class="section-nav-btn" data-section="motherboards">Motherboards</button>
+            <button class="section-nav-btn" data-section="memory">Memory (RAM)</button>
+            <button class="section-nav-btn" data-section="storage">Storage</button>
+            <button class="section-nav-btn" data-section="order-summary">Order Summary</button>
+        </div>
+
+        <!-- Processors Section -->
+        <section class="product-section" id="processors">
+            <h2>Processors</h2>
+            <div class="product-grid">
+                <div class="product-card" data-product-id="[id]">
+                    <img src="./images/Intel-CI9-13900K.jpg" alt="Intel Core i9-13900K">
+                    <h3 class="product-name">Intel Core i9-13900K</h3>
+                    <p class="description">24 cores (8P+16E), 32 threads, up to 5.8GHz, 36MB Intel Smart Cache, Intel UHD Graphics 770, PCIe 5.0 & 4.0 support, DDR5/DDR4 memory support</p>
+                    <div class="price">$599.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="./images/AMD_Ryzen_9.jpeg" alt="AMD Ryzen 9 7950X">
+                    <h3 class="product-name">AMD Ryzen 9 7950X</h3>
+                    <p class="description">16 cores, 32 threads, up to 5.7GHz, 64MB L3 cache, AMD Radeon Graphics, PCIe 5.0 support, DDR5 memory support, AM5 socket</p>
+                    <div class="price">$549.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="i7_intel_processer">
+                    <img src="./images/i7_intel_processer.jpg" alt="Intel Core i7-13700K">
+                    <h3 class="product-name">Intel Core i7-13700K</h3>
+                    <p class="description">16 cores (8P+8E), 24 threads, up to 5.4GHz, 30MB Intel Smart Cache, Intel UHD Graphics 770, PCIe 5.0 & 4.0 support, DDR5/DDR4 memory support</p>
+                    <div class="price">$409.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="ryzen-7-7800x3d">
+                    <img src="./images/AMD_Ryzen_7_7800X3D.jpg" alt="AMD Ryzen 7 7800X3D">
+                    <h3 class="product-name">AMD Ryzen 7 7800X3D</h3>
+                    <p class="description">8 cores, 16 threads, up to 5.0GHz, 96MB L3 cache with 3D V-Cache, AMD Radeon Graphics, PCIe 5.0 support, DDR5 memory support</p>
+                    <div class="price">$449.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="i5-13600k">
+                    <img src="./images/Intel_Core_i5_13600K.jpg" alt="Intel Core i5-13600K">
+                    <h3 class="product-name">Intel Core i5-13600K</h3>
+                    <p class="description">14 cores (6P+8E), 20 threads, up to 5.1GHz, 24MB Intel Smart Cache, Intel UHD Graphics 770, PCIe 5.0 & 4.0 support, DDR5/DDR4 memory support</p>
+                    <div class="price">$319.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="ryzen-5-7600x">
+                    <img src="./images/AMD_Ryzen_5_7600X.jpg" alt="AMD Ryzen 5 7600X">
+                    <h3 class="product-name">AMD Ryzen 5 7600X</h3>
+                    <p class="description">6 cores, 12 threads, up to 5.3GHz, 32MB L3 cache, AMD Radeon Graphics, PCIe 5.0 support, DDR5 memory support, AM5 socket</p>
+                    <div class="price">$249.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Graphics Cards Section -->
+        <section class="product-section" id="graphics-cards">
+            <h2>Graphics Cards</h2>
+            <div class="product-grid">
+                <div class="product-card" data-product-id="rtx-4090">
+                    <img src="./images/NVIDIA_RTX_4090.jpg" alt="NVIDIA RTX 4090">
+                    <h3 class="product-name">NVIDIA RTX 4090</h3>
+                    <p class="description">24GB GDDR6X, 16384 CUDA cores, 2.52GHz boost clock, 384-bit memory interface, 1008GB/s memory bandwidth, PCIe 4.0, 450W TDP</p>
+                    <div class="price">$1599.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="rx-7900xtx">
+                    <img src="./images/AMD_RX_7900_XTX.jpg" alt="AMD RX 7900 XTX">
+                    <h3 class="product-name">AMD RX 7900 XTX</h3>
+                    <p class="description">24GB GDDR6, 12288 Stream Processors, 2.5GHz boost clock, 384-bit memory interface, 960GB/s memory bandwidth, PCIe 4.0, 355W TDP</p>
+                    <div class="price">$999.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="rtx-4080">
+                    <img src="./images/NVIDIA_RTX_4080.jpg" alt="NVIDIA RTX 4080">
+                    <h3 class="product-name">NVIDIA RTX 4080</h3>
+                    <p class="description">16GB GDDR6X, 9728 CUDA cores, 2.51GHz boost clock, 256-bit memory interface, 716.8GB/s memory bandwidth, PCIe 4.0, 320W TDP</p>
+                    <div class="price">$1199.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="rtx-4070">
+                    <img src="./images/NVIDIA_RTX_4070.jpg" alt="NVIDIA RTX 4070">
+                    <h3 class="product-name">NVIDIA RTX 4070</h3>
+                    <p class="description">12GB GDDR6X, 5888 CUDA cores, 2.48GHz boost clock, 192-bit memory interface, 504.2GB/s memory bandwidth, PCIe 4.0, 200W TDP</p>
+                    <div class="price">$599.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="rx-7900xt">
+                    <img src="./images/AMD_RX_7900_XTX.jpg" alt="AMD RX 7900 XT">
+                    <h3 class="product-name">AMD RX 7900 XT</h3>
+                    <p class="description">20GB GDDR6, 10752 Stream Processors, 2.4GHz boost clock, 320-bit memory interface, 800GB/s memory bandwidth, PCIe 4.0, 300W TDP</p>
+                    <div class="price">$899.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="rx-7800xt">
+                    <img src="./images/AMD_RX_7800_XT.jpeg" alt="AMD RX 7800 XT">
+                    <h3 class="product-name">AMD RX 7800 XT</h3>
+                    <p class="description">16GB GDDR6, 7680 Stream Processors, 2.43GHz boost clock, 256-bit memory interface, 576GB/s memory bandwidth, PCIe 4.0, 263W TDP</p>
+                    <div class="price">$549.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Motherboards Section -->
+        <section class="product-section" id="motherboards">
+            <h2>Motherboards</h2>
+            <div class="product-grid">
+                <div class="product-card" data-product-id="asus-rog-z790">
+                    <img src="./images/ASUS_ROG_Z790.jpg" alt="ASUS ROG Z790">
+                    <h3 class="product-name">ASUS ROG Z790</h3>
+                    <p class="description">Intel Z790 chipset, LGA 1700 socket, DDR5 7200+MHz, PCIe 5.0 x16, 4x M.2 slots, 2.5Gb LAN, WiFi 6E, USB 3.2 Gen 2x2</p>
+                    <div class="price">$499.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="msi-mpg-x670">
+                    <img src="./images/MSI_MPG _X670.jpg" alt="MSI MPG X670">
+                    <h3 class="product-name">MSI MPG X670</h3>
+                    <p class="description">AMD X670 chipset, AM5 socket, DDR5 6400+MHz, PCIe 5.0 x16, 3x M.2 slots, 2.5Gb LAN, WiFi 6E, USB 3.2 Gen 2x2</p>
+                    <div class="price">$449.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="gigabyte-b760">
+                    <img src="./images/GIGABYTE_B760.jpg" alt="GIGABYTE B760">
+                    <h3 class="product-name">GIGABYTE B760</h3>
+                    <p class="description">Intel B760 chipset, LGA 1700 socket, DDR5 7600+MHz, PCIe 4.0 x16, 3x M.2 slots, 2.5Gb LAN, WiFi 6, USB 3.2 Gen 2</p>
+                    <div class="price">$299.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="asrock-b650">
+                    <img src="./images/ASRock_B650.jpeg" alt="ASRock B650">
+                    <h3 class="product-name">ASRock B650</h3>
+                    <p class="description">AMD B650 chipset, AM5 socket, DDR5 6400+MHz, PCIe 4.0 x16, 2x M.2 slots, 2.5Gb LAN, WiFi 6, USB 3.2 Gen 2</p>
+                    <div class="price">$249.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="msi-pro-z690">
+                    <img src="./images/MSI_PRO_Z690.jpg" alt="MSI PRO Z690">
+                    <h3 class="product-name">MSI PRO Z690</h3>
+                    <p class="description">Intel Z690 chipset, LGA 1700 socket, DDR5 6666+MHz, PCIe 5.0 x16, 4x M.2 slots, 2.5Gb LAN, WiFi 6, USB 3.2 Gen 2x2</p>
+                    <div class="price">$399.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="gigabyte-x670">
+                    <img src="./images/GIGABYTE_X670.jpg" alt="GIGABYTE X670">
+                    <h3 class="product-name">GIGABYTE X670</h3>
+                    <p class="description">AMD X670 chipset, AM5 socket, DDR5 6400+MHz, PCIe 5.0 x16, 4x M.2 slots, 2.5Gb LAN, WiFi 6E, USB 3.2 Gen 2x2</p>
+                    <div class="price">$429.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Memory Section -->
+        <section class="product-section" id="memory">
+            <h2>Memory (RAM)</h2>
+            <div class="product-grid">
+                <div class="product-card" data-product-id="corsair-ddr5-32gb">
+                    <img src="./images/Corsair_DDR5_32GB.jpeg" alt="Corsair DDR5 32GB">
+                    <h3 class="product-name">Corsair DDR5 32GB</h3>
+                    <p class="description">32GB (2x16GB) DDR5 6000MHz, CL36-36-36-76, 1.35V, XMP 3.0 ready, RGB lighting, aluminum heat spreader</p>
+                    <div class="price">$199.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="gskill-ddr5-32gb">
+                    <img src="./images/G.SKILL_DDR5_32GB.jpg" alt="G.SKILL DDR5 32GB">
+                    <h3 class="product-name">G.SKILL DDR5 32GB</h3>
+                    <p class="description">32GB (2x16GB) DDR5 6400MHz, CL32-39-39-102, 1.4V, XMP 3.0 ready, RGB lighting, aluminum heat spreader</p>
+                    <div class="price">$219.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="kingston-ddr5-32gb">
+                    <img src="./images/Kingston_DDR5_32GB.jpg" alt="Kingston DDR5 32GB">
+                    <h3 class="product-name">Kingston DDR5 32GB</h3>
+                    <p class="description">32GB (2x16GB) DDR5 5600MHz, CL40-40-40-80, 1.25V, XMP 3.0 ready, low-profile design, aluminum heat spreader</p>
+                    <div class="price">$179.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="crucial-ddr5-32gb">
+                    <img src="./images/Crucial_DDR5_32GB.jpg" alt="Crucial DDR5 32GB">
+                    <h3 class="product-name">Crucial DDR5 32GB</h3>
+                    <p class="description">32GB (2x16GB) DDR5 5200MHz, CL42-42-42-84, 1.25V, XMP 3.0 ready, low-profile design, aluminum heat spreader</p>
+                    <div class="price">$169.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="teamgroup-ddr5-32gb">
+                    <img src="./images/TEAMGROUP_DDR5_32GB.jpg" alt="TEAMGROUP DDR5 32GB">
+                    <h3 class="product-name">TEAMGROUP DDR5 32GB</h3>
+                    <p class="description">32GB (2x16GB) DDR5 6800MHz, CL34-45-45-108, 1.4V, XMP 3.0 ready, RGB lighting, aluminum heat spreader</p>
+                    <div class="price">$239.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="oloy-ddr5-32gb">
+                    <img src="./images/OLOy_DDR5_32GB.jpeg" alt="OLOy DDR5 32GB">
+                    <h3 class="product-name">OLOy DDR5 32GB</h3>
+                    <p class="description">32GB (2x16GB) DDR5 6000MHz, CL36-36-36-76, 1.35V, XMP 3.0 ready, RGB lighting, aluminum heat spreader</p>
+                    <div class="price">$189.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- Storage Section -->
+        <section class="product-section" id="storage">
+            <h2>Storage</h2>
+            <div class="product-grid">
+                <div class="product-card" data-product-id="samsung-990-pro-2tb">
+                    <img src="./images/Samsung_990_PRO_2TB.jpeg" alt="Samsung 990 PRO 2TB">
+                    <h3 class="product-name">Samsung 990 PRO 2TB</h3>
+                    <p class="description">PCIe 4.0 NVMe, 7450MB/s read, 6900MB/s write, 2TB capacity, 1200TBW endurance, 5-year warranty, M.2 2280 form factor</p>
+                    <div class="price">$229.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="wd-black-2tb">
+                    <img src="./images/WD_Black_2TB.jpg" alt="WD Black 2TB">
+                    <h3 class="product-name">WD Black 2TB</h3>
+                    <p class="description">PCIe 4.0 NVMe, 7300MB/s read, 7000MB/s write, 2TB capacity, 1200TBW endurance, 5-year warranty, M.2 2280 form factor</p>
+                    <div class="price">$199.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="crucial-p5-2tb">
+                    <img src="./images/Crucial_P5_2TB.jpg" alt="Crucial P5 2TB">
+                    <h3 class="product-name">Crucial P5 2TB</h3>
+                    <p class="description">PCIe 4.0 NVMe, 6600MB/s read, 5000MB/s write, 2TB capacity, 1200TBW endurance, 5-year warranty, M.2 2280 form factor</p>
+                    <div class="price">$179.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="samsung-870-evo-2tb">
+                    <img src="./images/Samsung_870_EVO_2TB.jpg" alt="Samsung 870 EVO 2TB">
+                    <h3 class="product-name">Samsung 870 EVO 2TB</h3>
+                    <p class="description">SATA III, 560MB/s read, 530MB/s write, 2TB capacity, 1200TBW endurance, 5-year warranty, 2.5-inch form factor</p>
+                    <div class="price">$149.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="wd-red-4tb">
+                    <img src="./images/WD_Red_4TB.jpg" alt="WD Red 4TB">
+                    <h3 class="product-name">WD Red 4TB</h3>
+                    <p class="description">SATA III, 5400RPM, 4TB capacity, 64MB cache, 3.5-inch form factor, optimized for NAS systems, 3-year warranty</p>
+                    <div class="price">$129.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card" data-product-id="seagate-ironwolf-4tb">
+                    <img src="./images/Seagate_IronWolf_4TB.jpg" alt="Seagate IronWolf 4TB">
+                    <h3 class="product-name">Seagate IronWolf 4TB</h3>
+                    <p class="description">SATA III, 5900RPM, 4TB capacity, 64MB cache, 3.5-inch form factor, optimized for NAS systems, 3-year warranty</p>
+                    <div class="price">$119.99</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Summary Section -->
+        <section class="order-summary" id="order-summary">
+            <h2>Order Summary</h2>
+            <div class="summary-section">
+                <table class="summary-table">
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Original Price</th>
+                            <th>20% Off Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- JavaScript will populate this -->
+                    </tbody>
+                </table>
+                
+                <div class="table-footer">
+                    <div class="discount-amount"></div>
+
+                    <div class="table-actions">
+                        <button id="remove-cart-btn">Remove Cart</button>
+                        <button id="save-favourite-btn">Save as Favourite</button>
+                        <button id="apply-favourite-btn">Apply Favourite</button>
+                        <button id="checkout-btn">Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Notification Container -->
+        <div class="notification-container" id="notification-container"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Footer Top Section -->
+        <div class="footer-top">
+      
+          <!-- Logo -->
+          <div class="footer-logo">
+            <img src="./images/razer-emblem.jpg" alt="Logo" class="navbar-logo-desktop" onclick="location.href='index.html'">
+          </div>
+      
+          <!-- Contact Information -->
+          <div class="footer-contact">
+            <p>Contact us:</p>
+            <p>Email: contact@example.com</p>
+            <p>Phone: +123 456 7890</p>
+          </div>
+      
+          <div class="footer-contact">
+            <p>Contact us:</p>
+            <p>Email: contact@example.com</p>
+            <p>Phone: +123 456 7890</p>
+          </div>
+      
+          <div class="footer-contact">
+            <p>Contact us:</p>
+            <p>Email: contact@example.com</p>
+            <p>Phone: +123 456 7890</p>
+          </div>
+      
+      
+      
+          <!-- Social Media Icons -->
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+          <a href="./index.html">Home</a>
+          <a href="./about_us_page.html">About us</a>
+          <a href="./game_page.html">Popular Games</a>
+          <a href="./upcoming_games_page.html">Upcoming games</a>
+          <a href="./online_games_page.html">Online games</a>
+          <a href="./gaming_consoles_page.HTML">Gaming Consoles</a>
+          <a href="./gaming_peripherals_page.HTML">Gaming Peripherals</a>
+          <a href="./contact_page.html">Contact</a>
+          <a href="./faq_page.html">Queries & FAQ</a>
+          <a href="./order_page.html">Order page</a>
+          <a href="./checkout_page.html">Checkout page</a>
+          <a href="./login_page.html">Login</a>
+        </div>
+          <!-- References -->
+          <!-- Reference for icons: Font Awesome (https://fontawesome.com/) -->
+          <!-- Reference for images: freepick -->
+          <!-- Reference for images:https://www.wallpaperflare.com/ -->
+          <!-- Reference for content: Curated based on user feedback and popular trends -->
+      </footer>
+
+    <script src="./scripts/order_page.js"></script>
+    <script src="./scripts/mobile_nav.js"></script>
+
+    <button id="scrollToTopBtn" class="scroll-to-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</body>
+</html> 

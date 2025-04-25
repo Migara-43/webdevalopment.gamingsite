@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queries and FAQ</title>
+    <link rel="stylesheet" href="./styles/faq_page.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fontawesome.com/icons/user-large?f=classic&s=solid" rel="stylesheet">
+    <link href="https://fontawesome.com/icons/magnifying-glass?f=classic&s=solid" rel="stylesheet">
+    <link href="https://fontawesome.com/icons/bars?f=classic&s=solid" rel="stylesheet">
+    <link href="https://fontawesome.com/icons/list?f=classic&s=solid" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/apple-touch-icon.png">
+    <link rel="manifest" href="./images/favicon-32x32.png">
+</head>
+
+</head>
+
+<header class="navbar-desktop">
+  <nav>
+    <div class="navbar-desktop">
+        <div class="navbar-desktop-section">
+            <img src="./images/desktop_nav_logo.jpg" alt="Gaming Store Logo" class="navbar-logo-desktop" onclick="location.href='index.html'">
+            <a href="./index.html" class="nav-button">Home</a>
+            <div class="dropdown-desktop">
+                <button class="dropdown-toggle-desktop">Games<i class="fa-solid fa-chevron-down"></i></button>
+                <div class="dropdown-menu-desktop">
+                  <a href="./game_page.html">Popular Games</a>
+                  <a href="./upcoming_games_page.html">Upcoming Games</a>
+                  <a href="./online_games_page.html">Online Games</a>
+                </div>
+              </div>
+            <div class="search-bar-desktop">
+                <input type="text" placeholder="Search...">
+            </div>
+            <a href="./login_page.html" class="login-desktop">login</a>
+        </div>
+        <div class="navbar-below-desktop">
+            <a href="./about_us_page.html">About Us</a>
+            <a href="./contact_page.html">Contact</a>
+            <a href="./gaming_consoles_page.HTML">Gaming Consoles</a>
+            <a href="gaming_peripherals_page.HTML">Gaming Peripherals</a>
+            <a href="./faq_page.html">Queries & FAQ</a>
+        </div>
+    </div>
+
+</nav>
+</header>
+
+<!-- Mobile Navigation Bar -->
+<header class="navbar-mobile">
+  <nav>
+    <div class="nav-header-mobile">
+        <img src="./images/razer-emblem.jpg" alt="mobile logo" class="navbar-logo-mobile" onclick="location.href='index.html'">
+        <div class="nav-buttons-mobile">
+            <button onclick="toggleSearch()"><e class="fa-solid fa-magnifying-glass"></e></button>
+            <button onclick="toggleMenu()"><m class="fa-solid fa-bars"></m></button>
+            <button onclick="location.href='login_page.html'" class="login-mobile"><i class="fa-solid fa-user-large"></i></button>
+        </div>
+    </div>
+    <input type="text" class="search-bar-dropdown-mobile" placeholder="Search...">
+    <div class="menu-dropdown-mobile">
+        <a href="./index.html">Home</a>
+        <a href="./game_page.html">Popular Games</a>
+        <a href="./upcoming_games_page.html">Upcoming games</a>
+        <a href="./online_games_page.html">Online games</a>
+        <a href="./gaming_consoles_page.HTML">Gaming Consoles</a>
+        <a href="./gaming_peripherals_page.HTML">Gaming Peripherals</a>
+        <a href="./about_us_page.html">About us</a>
+        <a href="./contact_page.html">Contact</a>
+        <a href="./faq_page.html">Queries & FAQ</a>
+        <a href="./login_page.html">Login</a>
+    </div>
+</nav>
+</header>
+
+<script>
+    function toggleSearch() {
+        const searchBar = document.querySelector('.search-bar-dropdown-mobile');
+        searchBar.style.display = searchBar.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function toggleMenu() {
+        const menuDropdown = document.querySelector('.menu-dropdown-mobile');
+        menuDropdown.style.display = menuDropdown.style.display === 'flex' ? 'none' : 'flex';
+    }
+</script>
+
+  
+
+
+<body>  
+    <section class="hero">
+        <h1>Welcome to Queries and FAQ</h1>
+    </section>   
+    <main class="container">
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>What are your store hours?</h3>
+                <p>Our stores are open from 9:00 AM to 9:00 PM, Monday through Saturday.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do you offer home delivery?</h3>
+                <p>Yes, we offer home delivery for orders placed online or via phone. Delivery charges may apply.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What is your return policy?</h3>
+                <p>You can return products within 30 days of purchase with the original receipt. Conditions apply.</p>
+            </div>
+        </section>
+
+        <!-- Ask a Question Section -->
+        <section class="ask-question">
+            <h2>Have a Question?</h2>
+            <div class="faq-dropdown">
+            <button class="faq-dropbtn">store</button>
+            <div class="faq-dropdown-content">
+              <a href="#option1">Gameranx</a>
+              <a href="#option2">Gamehub</a>
+              <a href="#option3">gamezone</a>
+            </div>
+        </div>
+          </div>
+            <form class="question-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="question">Your Question:</label>
+                <textarea id="question" name="question" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+    </main>
+</body>    
+</body>
+<footer class="footer">
+    <!-- Footer Top Section -->
+    <div class="footer-top">
+  
+      <!-- Logo -->
+      <div class="footer-logo">
+        <img src="./images/razer-emblem.jpg" alt="Logo" class="navbar-logo-desktop" onclick="location.href='index.html'">
+      </div>
+  
+      <!-- Contact Information -->
+      <div class="footer-contact">
+        <p>Contact us:</p>
+        <p>Email: contact@example.com</p>
+        <p>Phone: +123 456 7890</p>
+      </div>
+  
+      <div class="footer-contact">
+        <p>Contact us:</p>
+        <p>Email: contact@example.com</p>
+        <p>Phone: +123 456 7890</p>
+      </div>
+  
+      <div class="footer-contact">
+        <p>Contact us:</p>
+        <p>Email: contact@example.com</p>
+        <p>Phone: +123 456 7890</p>
+      </div>
+  
+  
+  
+      <!-- Social Media Icons -->
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+      <a href="./index.html">Home</a>
+      <a href="./about_us_page.html">About us</a>
+      <a href="./game_page.html">Popular Games</a>
+      <a href="./upcoming_games_page.html">Upcoming games</a>
+      <a href="./online_games_page.html">Online games</a>
+      <a href="./gaming_consoles_page.HTML">Gaming Consoles</a>
+      <a href="./gaming_peripherals_page.HTML">Gaming Peripherals</a>
+      <a href="./contact_page.html">Contact</a>
+      <a href="./faq_page.html">Queries & FAQ</a>
+      <a href="./login_page.html">Login</a>
+    </div>
+      <!-- References -->
+      <!-- Reference for icons: Font Awesome (https://fontawesome.com/) -->
+      <!-- Reference for images: freepick -->
+      <!-- Reference for images:https://www.wallpaperflare.com/ -->
+      <!-- Reference for content: Curated based on user feedback and popular trends -->
+  </footer>
+</html>

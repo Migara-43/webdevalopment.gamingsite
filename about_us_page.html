@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Gaming Website</title>
+  <link rel="stylesheet" href="./styles/about_us_page.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fontawesome.com/icons/user-large?f=classic&s=solid" rel="stylesheet">
+  <link href="https://fontawesome.com/icons/magnifying-glass?f=classic&s=solid" rel="stylesheet">
+  <link href="https://fontawesome.com/icons/bars?f=classic&s=solid" rel="stylesheet">
+  <link href="https://fontawesome.com/icons/list?f=classic&s=solid" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/android-chrome-512x512.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/apple-touch-icon.png">
+  <link rel="manifest" href="./images/favicon-32x32.png">
+
+</head>
+
+</head>
+
+<header class="navbar-desktop">
+  <nav>
+    <div class="navbar-desktop">
+        <div class="navbar-desktop-section">
+            <img src="./images/desktop_nav_logo.jpg" alt="Gaming Store Logo" class="navbar-logo-desktop" onclick="location.href='index.html'">
+            <a href="./index.html" class="nav-button">Home</a>
+            <div class="dropdown-desktop">
+                <button class="dropdown-toggle-desktop">Games<i class="fa-solid fa-chevron-down"></i></button>
+                <div class="dropdown-menu-desktop">
+                  <a href="./game_page.html">Popular Games</a>
+                  <a href="./upcoming_games_page.html">Upcoming Games</a>
+                  <a href="./online_games_page.html">Online Games</a>
+                </div>
+              </div>
+            <div class="search-bar-desktop">
+                <input type="text" placeholder="Search...">
+            </div>
+            <a href="./login_page.html" class="login-desktop">login</a>
+        </div>
+        <div class="navbar-below-desktop">
+            <a href="./about_us_page.html">About Us</a>
+            <a href="./contact_page.html">Contact</a>
+            <a href="./gaming_consoles_page.HTML">Gaming Consoles</a>
+            <a href="gaming_peripherals_page.HTML">Gaming Peripherals</a>
+            <a href="./faq_page.html">Queries & FAQ</a>
+        </div>
+    </div>
+
+</nav>
+</header>
+
+<!-- Mobile Navigation Bar -->
+<header class="navbar-mobile">
+  <nav>
+    <div class="nav-header-mobile">
+        <img src="./images/razer-emblem.jpg" alt="mobile logo" class="navbar-logo-mobile" onclick="location.href='index.html'">
+        <div class="nav-buttons-mobile">
+            <button onclick="toggleSearch()"><e class="fa-solid fa-magnifying-glass"></e></button>
+            <button onclick="toggleMenu()"><m class="fa-solid fa-bars"></m></button>
+            <button onclick="location.href='login_page.html'" class="login-mobile"><i class="fa-solid fa-user-large"></i></button>
+        </div>
+    </div>
+    <input type="text" class="search-bar-dropdown-mobile" placeholder="Search...">
+    <div class="menu-dropdown-mobile">
+        <a href="./index.html">Home</a>
+        <a href="./game_page.html">Popular Games</a>
+        <a href="./upcoming_games_page.html">Upcoming games</a>
+        <a href="./online_games_page.html">Online games</a>
+        <a href="./gaming_consoles_page.HTML">Gaming Consoles</a>
+        <a href="./gaming_peripherals_page.HTML">Gaming Peripherals</a>
+        <a href="./about_us_page.html">About us</a>
+        <a href="./contact_page.html">Contact</a>
+        <a href="./faq_page.html">Queries & FAQ</a>
+        <a href="./login_page.html">Login</a>
+    </div>
+</nav>
+</header>
+
+<script>
+    function toggleSearch() {
+        const searchBar = document.querySelector('.search-bar-dropdown-mobile');
+        searchBar.style.display = searchBar.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function toggleMenu() {
+        const menuDropdown = document.querySelector('.menu-dropdown-mobile');
+        menuDropdown.style.display = menuDropdown.style.display === 'flex' ? 'none' : 'flex';
+    }
+</script>
+
+
+
+
+<body>
+  <section class="hero">
+    <h1>About Us</h1>
+  </section>
+
+  <main class="container">
+    <!-- Store Cards Section -->
+     <!-- Description Box -->
+    <section class="description-box">
+      <h1>Welcome to Our Gaming Stores</h1>
+      <p>Explore our wide range of gaming hubs tailored to meet your entertainment needs. From the latest gaming consoles to exclusive accessories, we’ve got you covered. Find the nearest store below and join the ultimate gaming experience.</p>
+    </section>
+    <section class="stores">
+      <!-- Card 1 -->
+      <div class="store">
+        <img src="./images/KCC.jpg" alt="Store 1">
+        <div class="store-info">
+          <h2>Gameranx</h2>
+          <p>Your go-to place for the latest gaming consoles, accessories, and exclusive deals.</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.5477821168424!2d80.63436567400188!3d7.292179192715305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3662be06aaaab%3A0xb768579a001031c0!2sKCC%20Sri%20Dalada%20Veediya%2C%20Kandy%2020000!5e0!3m2!1sen!2slk!4v1737022892437!5m2!1sen!2slk" width="100%" height="200" style="border:0;" allowfullscreen></iframe>
+        </div>
+        <div class="hours">
+          <p><strong>Opening Hours:</strong> Mon - Fri: 9:00 AM - 8:00 PM</p>
+          <p><strong>Closed:</strong> Sunday</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="store">
+        <img src="./images/CCC.jpg" alt="Store 2">
+        <div class="store-info">
+          <h2>Gamehub</h2>
+          <p>Experience the ultimate gaming collection in our high-tech arena.</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.776057289473!2d79.85245757399751!3d6.91735539308223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596b1c2ae5b1%3A0x872e9262f485d782!2sColombo%20City%20Centre%20Mall%20and%20Residences!5e0!3m2!1sen!2slk!4v1737611840168!5m2!1sen!2slk" width="100%" height="200" style="border:0;" allowfullscreen></iframe>
+        </div>
+        <div class="hours">
+          <p><strong>Opening Hours:</strong> Mon - Sat: 10:00 AM - 7:00 PM</p>
+          <p><strong>Closed:</strong> Sunday</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="store">
+        <img src="./images/Havloc.jpg" alt="Store 3">
+        <div class="store-info">
+          <h2>Gamezone</h2>
+          <p>A paradise for gamers, offering the best discounts and collections in town.</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.776057289473!2d79.85245757399751!3d6.91735539308223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596b1c2ae5b1%3A0x872e9262f485d782!2sColombo%20City%20Centre%20Mall%20and%20Residences!5e0!3m2!1sen!2slk!4v1737023065366!5m2!1sen!2slk"width="100%" height="200" style="border:0;" allowfullscreen></iframe>
+        </div>
+        <div class="hours">
+          <p><strong>Opening Hours:</strong> Tue - Sun: 11:00 AM - 9:00 PM</p>
+          <p><strong>Closed:</strong> Monday</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summary Table -->
+    <section class="summary-table-section">
+      <h2>Store Summary</h2>
+      <table class="summary-table">
+        <thead>
+          <tr>
+            <th>Store Name</th>
+            <th>Location</th>
+            <th>Operating Hours</th>
+            <th>Contact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Downtown Gaming Hub</td>
+            <td>Kandy</td>
+            <td>Mon - Fri: 9 AM - 8 PM</td>
+            <td>(555) 123-4567</td>
+          </tr>
+          <tr>
+            <td>Uptown Gaming Arena</td>
+            <td>Colombo</td>
+            <td>Mon - Sat: 10 AM - 7 PM</td>
+            <td>(555) 765-4321</td>
+          </tr>
+          <tr>
+            <td>Suburban Gamers' Paradise</td>
+            <td>Colombo</td>
+            <td>Tue - Sun: 11 AM - 9 PM</td>
+            <td>(555) 987-6543</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4">Visit our stores for an unparalleled gaming experience!</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+    <section class="contact-shortcut">
+      <div class="contact-layout">
+        <p class="contact-description">Have questions? Visit our Contact page to get more detailes about our stores and products.</p>
+          <a href="./contact_page.html" class="contact-button">Contact</a>
+      </div>
+  </section>
+  </main>
+</body>
+</main>
+
+<footer class="footer">
+  <!-- Footer Top Section -->
+  <div class="footer-top">
+
+    <!-- Logo -->
+    <div class="footer-logo">
+      <img src="./images/razer-emblem.jpg" alt="Logo" class="navbar-logo-desktop" onclick="location.href='index.html'">
+    </div>
+
+    <!-- Contact Information -->
+    <div class="footer-contact">
+      <p>Contact us:</p>
+      <p>Email: contact@example.com</p>
+      <p>Phone: +123 456 7890</p>
+    </div>
+
+    <div class="footer-contact">
+      <p>Contact us:</p>
+      <p>Email: contact@example.com</p>
+      <p>Phone: +123 456 7890</p>
+    </div>
+
+    <div class="footer-contact">
+      <p>Contact us:</p>
+      <p>Email: contact@example.com</p>
+      <p>Phone: +123 456 7890</p>
+    </div>
+
+
+
+    <!-- Social Media Icons -->
+    <div class="footer-social">
+      <a href="#" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+  <!-- Footer Bottom Section -->
+  <div class="footer-bottom">
+    <a href="./index.html">Home</a>
+    <a href="./about_us_page.html">About us</a>
+    <a href="./game_page.html">Popular Games</a>
+    <a href="./upcoming_games_page.html">Upcoming games</a>
+    <a href="./online_games_page.html">Online games</a>
+    <a href="./gaming_consoles_page.HTML">Gaming Consoles</a>
+    <a href="./gaming_peripherals_page.HTML">Gaming Peripherals</a>
+    <a href="./contact_page.html">Contact</a>
+    <a href="./faq_page.html">Queries & FAQ</a>
+    <a href="./login_page.html">Login</a>
+  </div>
+    <!-- References -->
+    <!-- Reference for icons: Font Awesome (https://fontawesome.com/) -->
+    <!-- Reference for images: freepick -->
+    <!-- Reference for images:https://www.wallpaperflare.com/ -->
+    <!-- Reference for content: Curated based on user feedback and popular trends -->
+</footer>
+</html>
